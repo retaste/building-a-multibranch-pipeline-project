@@ -11,9 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh 'npm config get registry'
 		sh 'npm config set registry https://r.cnpmjs.org/'
-		sh 'npm config get registry'
                 sh 'npm install'
             }
         }
